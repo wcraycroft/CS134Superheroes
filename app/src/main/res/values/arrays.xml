@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string-array name="quiz_type_list">
+      <item>name</item>
+      <item>superpower</item>
+      <item>oneThing</item>
+   </string-array>
+
+   <string-array name="quiz_type_list_for_settings">
+      <item>Superhero Name</item>
+      <item>Superpower</item>
+      <item>One Thing</item>
+   </string-array>
+
+</resources>

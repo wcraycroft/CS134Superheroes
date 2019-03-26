@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CS 134 Superheroes</string>
+    <string name="action_settings">Settings</string>
+    <string name="quiz_type">Quiz Type</string>
+    <string name="quiz_type_description">Choose superhero name, superpower or one thing about them</string>
+    <string name="guess_name">Guess the Superhero</string>
+    <string name="guess_superpower">Guess the Super Power</string>
+    <string name="guess_one_thing">Guess the One Thing</string>
+    <string name="results">%1$d guesses, %2$.01f%% correct</string>
+    <string name="incorrect_answer">Incorrect Guess!</string>
+    <string name="default_quiz_type_message">One quiz type must be selected. Setting Superhero Name as the default quiz.</string>
+    <string name="restarting_quiz">Quiz will restart with your new settings.</string>
+    <string name="question">Question %1$d of %2$d</string>
+    <string name="reset_quiz">Reset Quiz</string>
+    <string name="image_description">Image of the current Superhero in the quiz</string>
+    <string name="default_quiz_type">name</string>
+    <string name="title_activity_settings">Settings</string>
+</resources>
