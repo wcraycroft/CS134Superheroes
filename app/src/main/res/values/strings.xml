@@ -9,7 +9,7 @@
     <string name="results">%1$d guesses, %2$.01f%% correct</string>
     <string name="incorrect_answer">Incorrect Guess!</string>
     <string name="default_quiz_type_message">One quiz type must be selected. Setting Superhero Name as the default quiz.</string>
-    <string name="restarting_quiz">Quiz will restart with your new settings.</string>
+    <string name="settings_saved">Setting has been saved.</string>
     <string name="question">Question %1$d of %2$d</string>
     <string name="reset_quiz">Reset Quiz</string>
     <string name="image_description">Image of the current Superhero in the quiz</string>

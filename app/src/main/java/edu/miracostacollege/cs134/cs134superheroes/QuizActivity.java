@@ -66,14 +66,16 @@ public class QuizActivity extends AppCompatActivity {
                 @Override
                 public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
-                    Log.i(TAG, "key: " + key);
+                    // For debug purposes
+                    //Log.i(TAG, "key: " + key);
 
+                    // Get new quiz type from shared preferences
                     mQuizType = sharedPreferences.getString(TYPE_KEY,
                             getString(R.string.default_quiz_type));
-                    resetQuiz();
+                    // Refresh 4 buttons to display new information
+                    refreshButtons();
 
-                    Toast.makeText(QuizActivity.this, R.string.restarting_quiz,
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizActivity.this, R.string.settings_saved, Toast.LENGTH_SHORT).show();
                 }
             };
 
@@ -215,7 +217,6 @@ public class QuizActivity extends AppCompatActivity {
             mButtons[i].setEnabled(true);
             // Display info based on quiz type using custom getter in model
             mButtons[i].setText(mAllSuperheroesList.get(i).getInfo(mQuizType));
-
         }
 
         // After the loop, randomly replace one of the active buttons with the correct Superhero
@@ -299,6 +300,32 @@ public class QuizActivity extends AppCompatActivity {
             failedMP.start();
         }
 
+    }
+
+    /**
+     * Resets the text for the 4 buttons and the guessTypeTextView
+     */
+    public void refreshButtons() {
+        // Set the text of guessTypeTextView based on quiz type
+        switch(mQuizType) {
+            case ("name"):
+                mGuessTypeTextView.setText(R.string.guess_name);
+                break;
+            case("superpower"):
+                mGuessTypeTextView.setText(R.string.guess_superpower);
+                break;
+            case("oneThing"):
+                mGuessTypeTextView.setText(R.string.guess_one_thing);
+                break;
+        }
+
+        // Loop through 4 buttons, display info based on quiz type
+        for (int i = 0; i < mButtons.length; i++) {
+            mButtons[i].setText(mAllSuperheroesList.get(i).getInfo(mQuizType));
+        }
+
+        // After the loop, randomly replace one of the active buttons with the correct Superhero
+        mButtons[rng.nextInt(mButtons.length)].setText(mCorrectSuperhero.getInfo(mQuizType));
     }
 
     /**
